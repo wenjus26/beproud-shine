@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SHINE LEADERSHIP | Empowering African Women</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=Outfit:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface": "#f8f9fa",
+                    "on-secondary-container": "#006b76",
+                    "surface-container-highest": "#e1e3e4",
+                    "inverse-primary": "#8bd2df",
+                    "secondary": "#006973",
+                    "on-secondary-fixed-variant": "#004f57",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-container": "#005f6b",
+                    "surface-container-low": "#f3f4f5",
+                    "on-primary-fixed-variant": "#004e59",
+                    "tertiary-fixed": "#dee4dc",
+                    "error": "#ba1a1a",
+                    "surface-dim": "#d9dadb",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "inverse-on-surface": "#f0f1f2",
+                    "secondary-fixed-dim": "#60d7e7",
+                    "on-surface-variant": "#3f484a",
+                    "surface-container": "#edeeef",
+                    "on-primary": "#ffffff",
+                    "on-tertiary-container": "#c6ccc4",
+                    "on-tertiary-fixed": "#171d18",
+                    "inverse-surface": "#2e3132",
+                    "tertiary-container": "#515751",
+                    "error-container": "#ffdad6",
+                    "on-primary-container": "#90d6e4",
+                    "primary-fixed-dim": "#8bd2df",
+                    "secondary-container": "#79edfe",
+                    "on-error-container": "#93000a",
+                    "on-surface": "#191c1d",
+                    "primary-fixed": "#a7eefc",
+                    "surface-tint": "#156874",
+                    "on-primary-fixed": "#001f24",
+                    "secondary-fixed": "#93f1ff",
+                    "outline": "#6f797b",
+                    "on-secondary-fixed": "#001f23",
+                    "background": "#f8f9fa",
+                    "on-background": "#191c1d",
+                    "tertiary": "#3a403a",
+                    "surface-variant": "#e1e3e4",
+                    "outline-variant": "#bec8ca",
+                    "on-tertiary-fixed-variant": "#424842",
+                    "primary": "#00464f",
+                    "on-error": "#ffffff",
+                    "tertiary-fixed-dim": "#c2c8c0",
+                    "surface-container-high": "#e7e8e9",
+                    "surface-bright": "#f8f9fa"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-desktop": "64px",
+                    "gutter": "24px",
+                    "max-width": "1280px",
+                    "base": "8px",
+                    "margin-mobile": "16px"
+            },
+            "fontFamily": {
+                    "headline-lg": ["Outfit"],
+                    "headline-lg-mobile": ["Outfit"],
+                    "body-lg": ["Inter"],
+                    "headline-md": ["Outfit"],
+                    "body-md": ["Inter"],
+                    "label-md": ["Inter"],
+                    "display-lg": ["Outfit"]
+            },
+            "fontSize": {
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            box-shadow: 0 10px 30px rgba(0, 95, 107, 0.08);
+            border-radius: 16px;
+        }
+
+        .primary-gradient-btn {
+            background: linear-gradient(135deg, #00464f 0%, #006b76 100%);
+            transition: all 0.3s ease-in-out;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .primary-gradient-btn:hover {
+            filter: brightness(1.1);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 70, 79, 0.2);
+        }
+
+        .shine-effect::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transform: rotate(45deg);
+            animation: shine 3s infinite;
+        }
+
+        @keyframes shine {
+            0% { left: -50%; }
+            100% { left: 150%; }
+        }
+
+        .floating-element {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .active-dot::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 4px;
+            background-color: currentColor;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md selection:bg-secondary-container">
+<!-- TopAppBar Shell -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-white/40 shadow-sm">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 max-w-max-width mx-auto">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary/20">
+<img class="w-full h-full object-cover" data-alt="A professional portrait of an African woman executive in business attire, with warm lighting and a soft-focus office background, embodying confidence and leadership excellence." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_aVHensOGCjRtx4UImzqs-o7ygBqOKC4gaXwpfj4Okxljn6zXhC4_-3geLu5N-op7K7-c__I0RJVH62_nJNk0kBzWcKfjLaHozujaiBvZyFtAbIJj6MSfjrP3hpufSb-72OSIVcFoO3jJes7hMDdOgPQ_g741g7P4TNPuMTn8WNxgfPGJSlHGj4DdpB-pzn49v_YqJwAEsezBon9jUIE0EjrWHtVtJT28M-pvLVUsOH6kuBRGZ-swUiNUDskiiqDUvYMMKRLdHVSJ"/>
+</div>
+<span class="font-headline-md text-headline-md font-bold tracking-tight text-primary">SHINE LEADERSHIP</span>
+</div>
+<!-- Desktop Nav -->
+<nav class="hidden md:flex items-center gap-8">
+<a class="font-label-md text-label-md text-primary font-bold relative active-dot" href="#">Home</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#">Programs</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#">Insights</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#">Community</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="p-2 text-on-surface-variant hover:text-primary transition-colors active:scale-95">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="primary-gradient-btn shine-effect text-white px-6 py-2 rounded-full font-label-md hidden md:block">
+                    Join Network
+                </button>
+<button class="md:hidden p-2 text-on-surface-variant">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative overflow-hidden py-20 lg:py-32">
+<div class="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none">
+<!-- Abstract organic shapes representing the logo flourishes -->
+<svg class="w-full h-full text-secondary fill-current" viewbox="0 0 500 500">
+<path d="M100,250 C100,150 200,100 300,200 S500,250 400,350 S100,350 100,250"></path>
+</svg>
+</div>
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="z-10 text-center lg:text-left">
+<span class="font-label-md text-label-md text-on-secondary-container bg-secondary-container/30 px-4 py-1.5 rounded-full mb-6 inline-block">THE GLOBAL FELLOWSHIP 2024</span>
+<h1 class="font-display-lg text-display-lg text-primary mb-8 leading-[1.1] md:text-[64px]">Lead with <span class="text-secondary italic">Confidence</span>, Shine with Purpose.</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-xl mx-auto lg:mx-0">
+                        Join an elite network of African women leaders transforming industries through visionary thinking, mentorship, and excellence.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+<button class="primary-gradient-btn shine-effect text-white px-10 py-4 rounded-full font-label-md text-lg">
+                            Start Your Journey
+                        </button>
+<button class="border-1.5 border-secondary text-secondary px-10 py-4 rounded-full font-label-md text-lg hover:bg-secondary/5 transition-colors">
+                            Explore Programs
+                        </button>
+</div>
+</div>
+<div class="relative">
+<div class="relative z-10 w-full aspect-[4/5] rounded-[2rem] overflow-hidden shadow-2xl">
+<img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnDevurLxzbpmHLi7EehT5skYcndYm9qTGu-w8Dw6xuK7GAMi8tohRmWwycmw_W-oWxrtYvo7SXcnkPVwBm3Obi6n54co6kZlDk4QnAAgr-akh8pa2pJYsMV9yeOZYhp08oehZ38IEfU9GUgT_LmVkosi5_x_lLQFVlSmt4xuLWAfiujJCLKlx1g6k3jVefUm-o9wzqlWy6lQ4-qLUcbGf02fwqCthrE6HEIDHKPTdB6qTrW0wkqLI2I2zRaYh1jwCJUwpb4zXJQqo"/>
+</div>
+<!-- Floating Glassmorphism Elements -->
+<div class="absolute -top-10 -right-10 glass-card p-6 floating-element z-20 hidden md:block">
+<div class="flex items-center gap-4">
+<div class="bg-secondary-container p-3 rounded-xl">
+<span class="material-symbols-outlined text-on-secondary-container">verified</span>
+</div>
+<div>
+<p class="font-label-md text-on-surface-variant">Accredited</p>
+<p class="font-headline-md text-primary font-bold">Leadership Excellence</p>
+</div>
+</div>
+</div>
+<div class="absolute -bottom-6 -left-10 glass-card p-6 floating-element z-20 hidden md:block" style="animation-delay: 1s;">
+<div class="flex -space-x-3 mb-2">
+<div class="w-8 h-8 rounded-full border-2 border-white bg-surface overflow-hidden"><img class="w-full h-full object-cover" data-alt="Portrait of a young professional African woman smiling." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhjZTCe8Wk1e6gqAltNdyk5S63Bn8I1isNCys_zPl7lsNDiPylRysM6CSX8qf0KSKNRWtyUP8F9D_bgLHRWtfWwGoCxWuWcqua8xxuf5BzTHPOyMcHb9MmREIRa8TqF1Op0Q7G2a4AuVOrQOM2JZYGrSrc6F_rq_34vl8Myjqv30Qfg2zc6YY6k43nOR5i1wLG0kcRngg9F4YTZR_e_7QsTkTIWIVTtfqSqvt4toysvlzZc9e1qm9h0VOn-3Qv0XjlBD0T4HtZverf"/></div>
+<div class="w-8 h-8 rounded-full border-2 border-white bg-surface overflow-hidden"><img class="w-full h-full object-cover" data-alt="Portrait of a mature African woman in leadership role." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLsPubMROToLGZ-R--akUxkDeTA6XnHVlX8q986FeyXpBmCFtRrAHSlf68fkFrQwwRF9FIWrBVMTNhZ2pF4ONL0ls9Cu0LXbk09th3CkAR58AavF27TbftnS7eOda301ttiGJo4IS6rgSwyL-uCYgLJDDi7bogf24PvqI8vOYVK6RMoe0LWOi4qDUKe4bvgTWWMgby4oxtI1SVwuv1_80SqvrrRuifyHNk-tp3kZGw9c2OSeNvJKnQr8s1v9Khp2Xq-XoCyyZnUhvV"/></div>
+<div class="w-8 h-8 rounded-full border-2 border-white bg-surface overflow-hidden"><img class="w-full h-full object-cover" data-alt="Portrait of an African woman entrepreneur." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfg71Wux0e6CRuSuKy_DvLp8cM9du7BPxILooTsaS5ltEu1EDfzjl54C5DnSSOVb0A_9RQFvVizr5j0_mq6yjhF8ZyQ5zhjH76m7ab8Wt1Xz9RAHTPnr5MvJ6y6bzBiUr6eeTNpMktpliC7TK1ri--DDaxwh9yui3XW1YX2-Qj0VytKA2P_C_ybKtRn7nL4eRPnfNMZmk_9Aq3q1fHfwpEphpFKsLB32WTzvYn61boq7atTX3eWHI0Yt1Es0FmuorvVKjS9udBfaWV"/></div>
+<div class="w-8 h-8 rounded-full border-2 border-white bg-primary text-white flex items-center justify-center text-[10px] font-bold">+10k</div>
+</div>
+<p class="font-label-md text-on-surface-variant">Active Community Members</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Impact Statistics Dashboard -->
+<section class="bg-surface-container-low py-20">
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="glass-card p-10 text-center flex flex-col items-center group">
+<div class="w-16 h-16 rounded-2xl bg-primary-container flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-white text-3xl">groups</span>
+</div>
+<h3 class="font-display-lg text-[40px] text-primary mb-2" id="count-members">10k+</h3>
+<p class="font-body-md text-on-surface-variant font-medium">Empowered Members</p>
+</div>
+<div class="glass-card p-10 text-center flex flex-col items-center group">
+<div class="w-16 h-16 rounded-2xl bg-secondary-container flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-on-secondary-container text-3xl">psychology</span>
+</div>
+<h3 class="font-display-lg text-[40px] text-primary mb-2" id="count-mentors">500+</h3>
+<p class="font-body-md text-on-surface-variant font-medium">Expert Mentors</p>
+</div>
+<div class="glass-card p-10 text-center flex flex-col items-center group">
+<div class="w-16 h-16 rounded-2xl bg-tertiary-fixed flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-on-tertiary-fixed-variant text-3xl">trending_up</span>
+</div>
+<h3 class="font-display-lg text-[40px] text-primary mb-2" id="count-success">95%</h3>
+<p class="font-body-md text-on-surface-variant font-medium">Career Success Rate</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Learning Academy & Challenge Program -->
+<section class="py-24">
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+<div class="max-w-2xl">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Shine Academy: Your Growth Map</h2>
+<p class="font-body-lg text-on-surface-variant">Curated programs designed by global executives to accelerate your professional journey.</p>
+</div>
+<a class="text-secondary font-label-md flex items-center gap-2 group" href="#">
+                        View All Programs <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Course Card 1 -->
+<div class="glass-card overflow-hidden flex flex-col hover:shadow-xl transition-shadow">
+<div class="h-48 overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" data-alt="A professional boardroom setting with high-end furniture and panoramic city views, reflecting a corporate leadership environment in a modern African metropolis. High-key lighting, clean aesthetics." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCG7h_al9ePgx7l6BzH_rD8QGl0wWiKWZEnT5zZapvM9Y0muOI6E4uN_UScUwhfWhIvYC2PrqYr_wSO4OplpkVLfMA6_dj28fHjClb07EzrR_4gCHIUtFtO-rGHCPp8W0DJxhghscvVHzOCmbo6qmeytG6XBPj-8mnjWtKqbPBPmF5ckhkuEdJmQns3hqMY_jNIzgUYnF2ZuJ3j679FJlIn9PkIPLxmDMT-qkTuvUJo_ME1UyTa5eipSXFdZTsydbINdB1UhgC-8jFb"/>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-[12px] font-bold text-primary">ADVANCED</div>
+</div>
+<div class="p-8 flex-1 flex flex-col">
+<div class="flex items-center gap-2 mb-4 text-secondary">
+<span class="material-symbols-outlined text-sm">schedule</span>
+<span class="text-label-md">12-Week Immersion</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-4 leading-tight">Boardroom Ready: Strategic Governance</h3>
+<p class="font-body-md text-on-surface-variant mb-6 flex-1">Master the art of corporate governance and strategic decision-making at the highest level.</p>
+<button class="w-full py-3 rounded-xl border border-outline-variant text-primary font-label-md hover:bg-primary/5 transition-colors">Course Details</button>
+</div>
+</div>
+<!-- Course Card 2 -->
+<div class="glass-card overflow-hidden flex flex-col hover:shadow-xl transition-shadow border-t-4 border-secondary">
+<div class="h-48 overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" data-alt="Conceptual image showing digital connections and networking nodes glowing in soft turquoise and gold over a dark, elegant background. Symbolizes global networking and professional connectivity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmNT0kR9BPb8efyizqvK8v1mqygTb9VuKHpLS5D7R2K8wkSbR1T7YQ0f0pFHB5uw0zdBEpAKMBltbSUeDvxc1v9hCQ-_VZz0TSUDULUhrbXenOk_2t1SFYJDHezv8R0p_-5WyxBqM2VPICiLhGSs5LHFV9J4IM5DSPqNZ0PiM2PHhK4OJ317697iT4AKpF0yxut1QnaHuIJtk7FmsOQReOopeGAwE_dEn5hk50SB15XbuYiXYr_DbPczK6-SC_J6jog6UBuSQTeZ2j"/>
+<div class="absolute top-4 right-4 bg-secondary text-white px-3 py-1 rounded-full text-[12px] font-bold">MOST POPULAR</div>
+</div>
+<div class="p-8 flex-1 flex flex-col">
+<div class="flex items-center gap-2 mb-4 text-secondary">
+<span class="material-symbols-outlined text-sm">verified_user</span>
+<span class="text-label-md">Alumni Certified</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-4 leading-tight">Authentic Leadership &amp; Personal Branding</h3>
+<p class="font-body-md text-on-surface-variant mb-6 flex-1">Build a globally recognized personal brand that reflects your unique leadership philosophy.</p>
+<button class="w-full py-3 rounded-xl primary-gradient-btn text-white font-label-md">Enroll Now</button>
+</div>
+</div>
+<!-- Course Card 3 -->
+<div class="lg:col-span-3 glass-card p-8 md:p-12 mt-8 border-t-4 border-secondary">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div>
+<span class="font-label-md text-secondary bg-secondary/10 px-4 py-1 rounded-full mb-4 inline-block">ELITE MENTORSHIP PROGRAM</span>
+<h3 class="font-headline-lg text-headline-lg text-primary mb-6">Expert Guidance for Global Impact</h3>
+<p class="font-body-lg text-on-surface-variant mb-8">
+        Our AI-powered matching pairs you with industry veterans based on your career trajectory and leadership goals. Experience transformative growth through structured one-on-one sessions.
+      </p>
+<button class="primary-gradient-btn shine-effect text-white px-8 py-4 rounded-full font-label-md text-lg">
+        Apply for Mentorship
+      </button>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<!-- Mentor Profile 1 -->
+<div class="bg-white/50 backdrop-blur p-6 rounded-2xl border border-white/40 shadow-sm">
+<div class="w-20 h-20 rounded-full overflow-hidden mb-4 border-2 border-secondary/20">
+<img alt="Dr. Sarah Mensah" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_aVHensOGCjRtx4UImzqs-o7ygBqOKC4gaXwpfj4Okxljn6zXhC4_-3geLu5N-op7K7-c__I0RJVH62_nJNk0kBzWcKfjLaHozujaiBvZyFtAbIJj6MSfjrP3hpufSb-72OSIVcFoO3jJes7hMDdOgPQ_g741g7P4TNPuMTn8WNxgfPGJSlHGj4DdpB-pzn49v_YqJwAEsezBon9jUIE0EjrWHtVtJT28M-pvLVUsOH6kuBRGZ-swUiNUDskiiqDUvYMMKRLdHVSJ"/>
+</div>
+<h4 class="font-headline-md text-primary text-lg mb-1">Dr. Sarah Mensah</h4>
+<p class="text-sm text-on-surface-variant mb-4">VP of Innovation</p>
+<div class="flex flex-wrap gap-2">
+<span class="text-[10px] font-label-md bg-primary/5 text-primary px-2 py-1 rounded">Strategic Growth</span>
+<span class="text-[10px] font-label-md bg-primary/5 text-primary px-2 py-1 rounded">Tech Policy</span>
+</div>
+</div>
+<!-- Mentor Profile 2 -->
+<div class="bg-white/50 backdrop-blur p-6 rounded-2xl border border-white/40 shadow-sm">
+<div class="w-20 h-20 rounded-full overflow-hidden mb-4 border-2 border-secondary/20">
+<img alt="Fatima Diallo" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhjZTCe8Wk1e6gqAltNdyk5S63Bn8I1isNCys_zPl7lsNDiPylRysM6CSX8qf0KSKNRWtyUP8F9D_bgLHRWtfWwGoCxWuWcqua8xxuf5BzTHPOyMcHb9MmREIRa8TqF1Op0Q7G2a4AuVOrQOM2JZYGrSrc6F_rq_34vl8Myjqv30Qfg2zc6YY6k43nOR5i1wLG0kcRngg9F4YTZR_e_7QsTkTIWIVTtfqSqvt4toysvlzZc9e1qm9h0VOn-3Qv0XjlBD0T4HtZverf"/>
+</div>
+<h4 class="font-headline-md text-primary text-lg mb-1">Fatima Diallo</h4>
+<p class="text-sm text-on-surface-variant mb-4">Fintech Founder</p>
+<div class="flex flex-wrap gap-2">
+<span class="text-[10px] font-label-md bg-primary/5 text-primary px-2 py-1 rounded">Venture Capital</span>
+<span class="text-[10px] font-label-md bg-primary/5 text-primary px-2 py-1 rounded">Scaling</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Community Impact Analytics -->
+<section class="py-24 bg-surface-container">
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="glass-card p-8 md:p-16 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-6">Our Growing Ecosystem</h2>
+<p class="font-body-lg text-on-surface-variant mb-8">Tracking our collective progress as we redefine leadership across the African continent and the diaspora.</p>
+<div class="space-y-6">
+<div>
+<div class="flex justify-between mb-2">
+<span class="font-label-md text-primary">Continental Expansion</span>
+<span class="font-label-md text-secondary">88%</span>
+</div>
+<div class="h-3 w-full bg-primary/10 rounded-full overflow-hidden">
+<div class="h-full bg-secondary w-[88%] rounded-full transition-all duration-1000"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-2">
+<span class="font-label-md text-primary">Executive Placements</span>
+<span class="font-label-md text-secondary">74%</span>
+</div>
+<div class="h-3 w-full bg-primary/10 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[74%] rounded-full transition-all duration-1000"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-2">
+<span class="font-label-md text-primary">Mentor-Mentee Matching</span>
+<span class="font-label-md text-secondary">92%</span>
+</div>
+<div class="h-3 w-full bg-primary/10 rounded-full overflow-hidden">
+<div class="h-full bg-secondary-fixed-dim w-[92%] rounded-full transition-all duration-1000"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="relative flex justify-center">
+<div class="w-full max-w-md aspect-square relative flex items-center justify-center">
+<!-- SVG Radar Chart Simulation -->
+<svg class="w-full h-full drop-shadow-2xl" viewbox="0 0 400 400">
+<circle cx="200" cy="200" fill="none" r="180" stroke="rgba(0, 70, 79, 0.1)" stroke-width="1"></circle>
+<circle cx="200" cy="200" fill="none" r="140" stroke="rgba(0, 70, 79, 0.1)" stroke-width="1"></circle>
+<circle cx="200" cy="200" fill="none" r="100" stroke="rgba(0, 70, 79, 0.1)" stroke-width="1"></circle>
+<circle cx="200" cy="200" fill="none" r="60" stroke="rgba(0, 70, 79, 0.1)" stroke-width="1"></circle>
+<line stroke="rgba(0, 70, 79, 0.1)" stroke-width="1" x1="200" x2="200" y1="20" y2="380"></line>
+<line stroke="rgba(0, 70, 79, 0.1)" stroke-width="1" x1="20" x2="380" y1="200" y2="200"></line>
+<!-- Impact Polygon -->
+<path class="animate-pulse" d="M200,60 L320,140 L340,280 L200,340 L80,240 L100,100 Z" fill="rgba(0, 107, 118, 0.15)" stroke="#006973" stroke-linejoin="round" stroke-width="3"></path>
+<!-- Data points -->
+<circle cx="200" cy="60" fill="#00464f" r="5"></circle>
+<circle cx="320" cy="140" fill="#00464f" r="5"></circle>
+<circle cx="340" cy="280" fill="#00464f" r="5"></circle>
+<circle cx="200" cy="340" fill="#00464f" r="5"></circle>
+</svg>
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<div class="text-center">
+<p class="font-headline-md text-primary font-bold">120k+</p>
+<p class="text-[10px] font-label-md uppercase tracking-widest text-on-surface-variant">Global Reach</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Call to Action -->
+<section class="py-24 relative overflow-hidden">
+<div class="absolute inset-0 bg-primary pointer-events-none"></div>
+<!-- Decorative "Shine" animation background -->
+<div class="absolute inset-0 opacity-20">
+<div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-secondary via-transparent to-transparent"></div>
+</div>
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop relative z-10 text-center">
+<h2 class="font-display-lg text-[48px] text-white mb-8">Ready to step into your light?</h2>
+<p class="font-body-lg text-secondary-fixed mb-12 max-w-2xl mx-auto">Applications for our Executive Fellowship and Mentorship programs are now open for the next cohort.</p>
+<div class="flex flex-col sm:flex-row gap-6 justify-center">
+<button class="bg-white text-primary px-12 py-5 rounded-full font-label-md text-xl hover:bg-secondary-fixed transition-colors shine-effect overflow-hidden relative">
+                        Start Your Journey
+                    </button>
+<button class="border border-white/40 text-white px-12 py-5 rounded-full font-label-md text-xl hover:bg-white/10 transition-colors">
+                        Book a Consultation
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar Shell -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 bg-surface/80 dark:bg-inverse-surface/90 backdrop-blur-xl border-t border-white/40 shadow-[0_-10px_30px_rgba(0,95,107,0.08)] flex justify-around items-center h-16 pb-safe">
+<a class="flex flex-col items-center justify-center text-primary font-bold relative after:content-[''] after:absolute after:-bottom-1 after:w-1 after:h-1 after:bg-primary after:rounded-full" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-label-md">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant opacity-70" href="#">
+<span class="material-symbols-outlined">auto_stories</span>
+<span class="text-[10px] font-label-md">Programs</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant opacity-70" href="#">
+<span class="material-symbols-outlined">insights</span>
+<span class="text-[10px] font-label-md">Insights</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant opacity-70" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-label-md">Profile</span>
+</a>
+</nav>
+<footer class="bg-surface-dim pt-20 pb-24 md:pb-12 border-t border-outline-variant/20">
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+<div class="md:col-span-2">
+<span class="font-headline-md text-primary font-bold tracking-tight mb-6 block">SHINE LEADERSHIP</span>
+<p class="font-body-md text-on-surface-variant max-w-sm">Elevating the African female narrative through structured excellence, community empowerment, and purposeful leadership.</p>
+</div>
+<div>
+<h4 class="font-label-md text-primary mb-6 uppercase tracking-wider">Resources</h4>
+<ul class="space-y-4 font-body-md text-on-surface-variant">
+<li><a class="hover:text-secondary transition-colors" href="#">Research Reports</a></li>
+<li><a class="hover:text-secondary transition-colors" href="#">Global Fellowship</a></li>
+<li><a class="hover:text-secondary transition-colors" href="#">Alumni Network</a></li>
+<li><a class="hover:text-secondary transition-colors" href="#">Corporate Training</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-primary mb-6 uppercase tracking-wider">Connect</h4>
+<ul class="space-y-4 font-body-md text-on-surface-variant">
+<li><a class="hover:text-secondary transition-colors" href="#">Contact Us</a></li>
+<li><a class="hover:text-secondary transition-colors" href="#">Instagram</a></li>
+<li><a class="hover:text-secondary transition-colors" href="#">LinkedIn</a></li>
+<li><a class="hover:text-secondary transition-colors" href="#">Newsletter</a></li>
+</ul>
+</div>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-outline-variant/20 text-[12px] font-label-md text-on-surface-variant opacity-60">
+<p>© 2024 Be Proud &amp; Shine. All Rights Reserved.</p>
+<div class="flex gap-6 mt-4 md:mt-0">
+<a href="#">Privacy Policy</a>
+<a href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Simple counter animation logic
+        function animateValue(obj, start, end, duration) {
+            let startTimestamp = null;
+            const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                const value = Math.floor(progress * (end - start) + start);
+                obj.innerHTML = (end === 95 ? value + '%' : value + (end === 10 ? 'k+' : '+'));
+                if (progress < 1) {
+                    window.requestAnimationFrame(step);
+                }
+            };
+            window.requestAnimationFrame(step);
+        }
+
+        const observerOptions = {
+            threshold: 0.5
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateValue(document.getElementById('count-members'), 0, 10, 2000);
+                    animateValue(document.getElementById('count-mentors'), 0, 500, 2000);
+                    animateValue(document.getElementById('count-success'), 0, 95, 2000);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        observer.observe(document.getElementById('count-members'));
+    </script>
+</body></html>

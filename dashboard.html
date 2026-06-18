@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SHINE LEADERSHIP | Member Dashboard</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface": "#f8f9fa",
+                    "on-secondary-container": "#006b76",
+                    "surface-container-highest": "#e1e3e4",
+                    "inverse-primary": "#8bd2df",
+                    "secondary": "#006973",
+                    "on-secondary-fixed-variant": "#004f57",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-container": "#005f6b",
+                    "surface-container-low": "#f3f4f5",
+                    "on-primary-fixed-variant": "#004e59",
+                    "tertiary-fixed": "#dee4dc",
+                    "error": "#ba1a1a",
+                    "surface-dim": "#d9dadb",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "inverse-on-surface": "#f0f1f2",
+                    "secondary-fixed-dim": "#60d7e7",
+                    "on-surface-variant": "#3f484a",
+                    "surface-container": "#edeeef",
+                    "on-primary": "#ffffff",
+                    "on-tertiary-container": "#c6ccc4",
+                    "on-tertiary-fixed": "#171d18",
+                    "inverse-surface": "#2e3132",
+                    "tertiary-container": "#515751",
+                    "error-container": "#ffdad6",
+                    "on-primary-container": "#90d6e4",
+                    "primary-fixed-dim": "#8bd2df",
+                    "secondary-container": "#79edfe",
+                    "on-error-container": "#93000a",
+                    "on-surface": "#191c1d",
+                    "primary-fixed": "#a7eefc",
+                    "surface-tint": "#156874",
+                    "on-primary-fixed": "#001f24",
+                    "secondary-fixed": "#93f1ff",
+                    "outline": "#6f797b",
+                    "on-secondary-fixed": "#001f23",
+                    "background": "#f8f9fa",
+                    "on-background": "#191c1d",
+                    "tertiary": "#3a403a",
+                    "surface-variant": "#e1e3e4",
+                    "outline-variant": "#bec8ca",
+                    "on-tertiary-fixed-variant": "#424842",
+                    "primary": "#00464f",
+                    "on-error": "#ffffff",
+                    "tertiary-fixed-dim": "#c2c8c0",
+                    "surface-container-high": "#e7e8e9",
+                    "surface-bright": "#f8f9fa"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-desktop": "64px",
+                    "gutter": "24px",
+                    "max-width": "1280px",
+                    "base": "8px",
+                    "margin-mobile": "16px"
+            },
+            "fontFamily": {
+                    "headline-lg": ["Outfit"],
+                    "headline-lg-mobile": ["Outfit"],
+                    "body-lg": ["Inter"],
+                    "headline-md": ["Outfit"],
+                    "body-md": ["Inter"],
+                    "label-md": ["Inter"],
+                    "display-lg": ["Outfit"]
+            },
+            "fontSize": {
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #f8f9fa;
+            color: #191c1d;
+            scroll-behavior: smooth;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            box-shadow: 0 10px 30px rgba(0, 95, 107, 0.08);
+            transition: all 0.3s ease-in-out;
+        }
+        .glass-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 35px rgba(0, 95, 107, 0.12);
+        }
+        .shine-btn {
+            background: linear-gradient(135deg, #00464f 0%, #006973 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .shine-btn::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent 45%, rgba(255,255,255,0.1) 50%, transparent 55%);
+            animation: shine 4s infinite;
+        }
+        @keyframes shine {
+            0% { transform: translateX(-100%) translateY(-100%); }
+            20%, 100% { transform: translateX(100%) translateY(100%); }
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            height: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #bec8ca;
+            border-radius: 10px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-body-md text-body-md overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full z-40 bg-surface/80 backdrop-blur-xl border-b border-white/40 shadow-sm h-20 flex justify-between items-center px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto left-0 right-0">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary-fixed">
+<img class="w-full h-full object-cover" data-alt="A professional studio portrait of a woman of African descent, radiating confidence and warmth, wearing elegant business attire in a brightly lit, modern executive office with glass walls and hints of greenery in the background. High-end editorial photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDE5U_SoFP_XH8rUc_Jfy-07CNozyDNIjqV0bJen6IWhCKC-9cxz-QZyeqClILORl2dRae2VAGQICVyRDAK72aO4sQ5gPbCJ-qOfAcL8mbGrVuyx1_PuS5Au1zQOYwZBVF_aD7YIJ5lLn4OBrT-0yExQDnEkteX58_JMc89-zOyPGNmhi0QjWR4azrw3ZE8cjayQCTx3EK2Zs0D2D1jOH8YM9ImKdIfPU3VyQQIybeXrnchwUk1_m-cfoBwXDCLUuflusBrvEmfO3lD"/>
+</div>
+<span class="font-headline-md text-headline-md font-bold tracking-tight text-primary">SHINE LEADERSHIP</span>
+</div>
+<nav class="hidden md:flex gap-8">
+<a class="text-primary font-bold transition-colors" href="#">Home</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">Programs</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">Insights</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">Profile</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-primary active:scale-95 transition-transform" data-icon="notifications">notifications</button>
+<button class="md:hidden material-symbols-outlined text-primary" data-icon="menu">menu</button>
+</div>
+</header>
+<main class="pt-28 pb-24 px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto">
+<!-- Welcome Hero Section -->
+<section class="mb-12">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div>
+<h1 class="font-headline-lg text-headline-lg text-primary mb-2">Welcome back, Amina!</h1>
+<p class="text-on-surface-variant font-body-lg">Your leadership journey is accelerating. You've unlocked 2 new modules this week.</p>
+</div>
+<button class="shine-btn text-white px-8 py-3 rounded-full font-label-md flex items-center gap-2 active:scale-95 transition-transform">
+<span>Continue Program</span>
+<span class="material-symbols-outlined text-[20px]" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</section>
+<!-- Dashboard Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Personal Progress Chart -->
+<div class="md:col-span-8 glass-card rounded-xl p-8 flex flex-col md:flex-row items-center gap-8">
+<div class="relative w-48 h-48">
+<svg class="w-full h-full transform -rotate-90" viewbox="0 0 100 100">
+<circle class="text-primary/10" cx="50" cy="50" fill="transparent" r="40" stroke="currentColor" stroke-width="8"></circle>
+<circle class="text-secondary stroke-round transition-all duration-1000" cx="50" cy="50" fill="transparent" r="40" stroke="currentColor" stroke-dasharray="251.2" stroke-dashoffset="62.8" stroke-width="8"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+<span class="font-display-lg text-[32px] text-primary">75%</span>
+<span class="text-label-md text-on-surface-variant">Growth</span>
+</div>
+</div>
+<div class="flex-1 space-y-4">
+<h3 class="font-headline-md text-headline-md text-primary">Leadership Development</h3>
+<p class="text-on-surface-variant">You are excelling in "Strategic Influence" and "Empathetic Communication". Your current growth curve is 12% higher than the cohort average.</p>
+<div class="grid grid-cols-2 gap-4">
+<div class="p-3 bg-surface-container rounded-lg">
+<span class="block text-label-md text-secondary">NEXT MILESTONE</span>
+<span class="font-bold text-on-surface">Global Mentor Status</span>
+</div>
+<div class="p-3 bg-surface-container rounded-lg">
+<span class="block text-label-md text-secondary">ACTIVE TRACK</span>
+<span class="font-bold text-on-surface">Executive Presence</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Community Ranking -->
+<div class="md:col-span-4 glass-card rounded-xl p-8 flex flex-col justify-between overflow-hidden relative">
+<div class="z-10">
+<div class="flex items-center justify-between mb-4">
+<span class="text-label-md text-secondary uppercase tracking-widest">Global Ranking</span>
+<span class="material-symbols-outlined text-secondary" data-icon="leaderboard">leaderboard</span>
+</div>
+<div class="flex items-baseline gap-2 mb-2">
+<span class="font-display-lg text-display-lg text-primary">#14</span>
+<span class="text-on-surface-variant">/ 850 Members</span>
+</div>
+<p class="text-body-md text-on-surface-variant">Top 2% of the Executive Fellowship network this month.</p>
+</div>
+<div class="mt-6 pt-6 border-t border-outline-variant/30 z-10">
+<div class="flex -space-x-3 mb-4">
+<img class="w-10 h-10 rounded-full border-2 border-white object-cover" data-alt="Close-up avatar of a professional woman, stylish glasses, soft bokeh office background, teal color palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgERu-VmKNUz0fWHrZzStDpRy6LIwAsVbYtyRklze0ZaOxytt7hNgoybgT8ELvCHe9F8ykkaelUXNtPr13omwTamA0DtnMyenCFXxpsqYH1kgRlIc772hHNzAb2VC3XdAfpCZM9lvR0FcJ1-U1puOZS7NyxtnzNt6-Bxc1i_cH9dETJtcY0u7SDb3CtCBa-9gg4cdGeFayInVTalGq3Tuq7RnQlPD3XpQXdwKYA0migESPbQ31Ot7nFCkjjEjhtyL-g3FntheHRJHm"/>
+<img class="w-10 h-10 rounded-full border-2 border-white object-cover" data-alt="Avatar of a male professional mentor, friendly expression, urban architectural background, high-end photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAfcfohkq-pF0Yl9-2oeC_wg2kNf203rpI8ssSHN5V63E4m2Oh8WoaQyooEK7tLmmBAWgGZ82kNb7NIjWUyO-dmEYCiiHYvrTDCiG_UXA4h1QPZYo4ZZKXsPr7pwUoGJ8ErYAR-TqsiRE_N-LuSdbxbsU8RMG9n3iTl4UtrZEotF4VyjLWSkcisHc5AtnWzc5yzddKb3Dq-aUIvVUMCHc2bNdujrxrdMXc9CQMy8cvtwEYAfHUwHnaKwpKSUjdN0XNdCbBZd8KR_EF"/>
+<img class="w-10 h-10 rounded-full border-2 border-white object-cover" data-alt="Avatar of a woman in traditional West African headwrap and modern suit, smiling, studio lighting, professional." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDY2MqQd2tFkEi--SYw4zCPXARZti27GcjismV_XHkt-LnseclQKg09qVdETDohb313ak-Y09kuJJcqHoMMKkXQ3Uz33Gcq27W3lWCXyfW5upRYAhVFl28utWqIpi0zi8eRSAvb3GKMPTwS2cDLqqfSSukvKaLnReVw8m9eibenRstoFCLpajgis4znq6Rmpl73WVMSqEcs3yS5Zsn_A5BXATxUfP1kaOmQW5Mc1KMc19_4i_csR6bhghWKZoO_tVNlbMFGu9GUcrsC"/>
+<div class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center text-[12px] font-bold border-2 border-white">+5</div>
+</div>
+<a class="text-secondary font-bold text-label-md flex items-center gap-1 hover:gap-2 transition-all" href="#">View Leaderboard <span class="material-symbols-outlined text-[18px]">chevron_right</span></a>
+</div>
+<!-- Abstract Decorative Element -->
+<div class="absolute -bottom-10 -right-10 w-32 h-32 bg-secondary/5 rounded-full blur-3xl"></div>
+</div>
+<!-- Learning Analytics KPI Cards -->
+<div class="md:col-span-12 grid grid-cols-1 sm:grid-cols-3 gap-gutter">
+<div class="glass-card rounded-xl p-6 flex items-center gap-6">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="task_alt">task_alt</span>
+</div>
+<div>
+<span class="block text-display-lg text-primary leading-none">24</span>
+<span class="text-label-md text-on-surface-variant uppercase">Courses Completed</span>
+</div>
+</div>
+<div class="glass-card rounded-xl p-6 flex items-center gap-6">
+<div class="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined" data-icon="schedule">schedule</span>
+</div>
+<div>
+<span class="block text-display-lg text-primary leading-none">156</span>
+<span class="text-label-md text-on-surface-variant uppercase">Hours Learned</span>
+</div>
+</div>
+<div class="glass-card rounded-xl p-6 flex items-center gap-6">
+<div class="w-12 h-12 rounded-full bg-tertiary-container/10 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined" data-icon="stars" style="font-variation-settings: 'FILL' 1;">stars</span>
+</div>
+<div>
+<span class="block text-display-lg text-primary leading-none">4.2k</span>
+<span class="text-label-md text-on-surface-variant uppercase">Community Points</span>
+</div>
+</div>
+</div>
+<!-- Achievement Badges Scroll -->
+<div class="md:col-span-7 flex flex-col gap-6">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-md text-headline-md text-primary">Achievement Badges</h3>
+<button class="text-secondary font-bold text-label-md">View All</button>
+</div>
+<div class="flex gap-4 overflow-x-auto pb-4 custom-scrollbar">
+<div class="flex-shrink-0 w-40 glass-card rounded-xl p-4 flex flex-col items-center text-center gap-3">
+<div class="w-16 h-16 rounded-full bg-gradient-to-br from-secondary/20 to-primary/20 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[40px]" data-icon="workspace_premium" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+</div>
+<span class="font-bold text-body-md text-primary leading-tight">Confidence Champion</span>
+</div>
+<div class="flex-shrink-0 w-40 glass-card rounded-xl p-4 flex flex-col items-center text-center gap-3">
+<div class="w-16 h-16 rounded-full bg-gradient-to-br from-secondary/20 to-primary/20 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[40px]" data-icon="visibility" style="font-variation-settings: 'FILL' 1;">visibility</span>
+</div>
+<span class="font-bold text-body-md text-primary leading-tight">Visionary Leader</span>
+</div>
+<div class="flex-shrink-0 w-40 glass-card rounded-xl p-4 flex flex-col items-center text-center gap-3 opacity-60">
+<div class="w-16 h-16 rounded-full bg-surface-container flex items-center justify-center text-outline">
+<span class="material-symbols-outlined text-[40px]" data-icon="handshake">handshake</span>
+</div>
+<span class="font-bold text-body-md text-on-surface-variant leading-tight">Master Negotiator</span>
+</div>
+<div class="flex-shrink-0 w-40 glass-card rounded-xl p-4 flex flex-col items-center text-center gap-3 opacity-60">
+<div class="w-16 h-16 rounded-full bg-surface-container flex items-center justify-center text-outline">
+<span class="material-symbols-outlined text-[40px]" data-icon="public">public</span>
+</div>
+<span class="font-bold text-body-md text-on-surface-variant leading-tight">Global Fellow</span>
+</div>
+</div>
+</div>
+<!-- Career Progression Timeline -->
+<div class="md:col-span-5 glass-card rounded-xl p-8">
+<h3 class="font-headline-md text-headline-md text-primary mb-8">Career Progression</h3>
+<div class="relative space-y-8 before:content-[''] before:absolute before:left-3 before:top-0 before:bottom-0 before:w-0.5 before:bg-outline-variant/30">
+<div class="relative pl-10">
+<div class="absolute left-0 top-1 w-6 h-6 rounded-full bg-secondary border-4 border-white shadow-sm z-10"></div>
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-bold text-primary">Senior Director Promotion</h4>
+<p class="text-label-md text-on-surface-variant">Achieved • June 2024</p>
+</div>
+<span class="material-symbols-outlined text-secondary" data-icon="verified">verified</span>
+</div>
+</div>
+<div class="relative pl-10">
+<div class="absolute left-0 top-1 w-6 h-6 rounded-full bg-primary border-4 border-white shadow-sm z-10"></div>
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-bold text-primary">Executive Coaching Cert</h4>
+<p class="text-label-md text-on-surface-variant">In Progress • Oct 2024</p>
+</div>
+</div>
+</div>
+<div class="relative pl-10">
+<div class="absolute left-0 top-1 w-6 h-6 rounded-full bg-outline-variant border-4 border-white shadow-sm z-10"></div>
+<div class="flex justify-between items-start">
+<div class="opacity-50">
+<h4 class="font-bold text-on-surface-variant">Board Seat Placement</h4>
+<p class="text-label-md text-on-surface-variant">Projected • Feb 2025</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Mobile -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-t border-white/40 h-16 pb-safe flex justify-around items-center">
+<a class="flex flex-col items-center justify-center text-primary font-bold relative after:content-[''] after:absolute after:-bottom-1 after:w-1 after:h-1 after:bg-primary after:rounded-full" href="#">
+<span class="material-symbols-outlined" data-icon="home" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="text-[10px]">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant opacity-70" href="#">
+<span class="material-symbols-outlined" data-icon="auto_stories">auto_stories</span>
+<span class="text-[10px]">Programs</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant opacity-70" href="#">
+<span class="material-symbols-outlined" data-icon="insights">insights</span>
+<span class="text-[10px]">Insights</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant opacity-70" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="text-[10px]">Profile</span>
+</a>
+</nav>
+<!-- Floating Action Button -->
+<button class="fixed bottom-24 right-6 md:bottom-12 md:right-12 w-14 h-14 rounded-full shine-btn text-white shadow-xl flex items-center justify-center z-30 active:scale-90 transition-all duration-200">
+<span class="material-symbols-outlined text-[28px]" data-icon="add">add</span>
+</button>
+<script>
+        // Micro-interaction: Update progress ring on load
+        document.addEventListener('DOMContentLoaded', () => {
+            const circle = document.querySelector('circle.text-secondary');
+            if (circle) {
+                // Radius is 40, circumference is 2 * pi * r = 251.2
+                // 75% growth = 25% offset = 251.2 * 0.25 = 62.8
+                circle.style.strokeDashoffset = '62.8';
+            }
+        });
+    </script>
+</body></html>

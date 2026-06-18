@@ -151,44 +151,48 @@
   </head>
 <body class="font-body-md text-body-md overflow-x-hidden">
 <!-- Top Navigation Bar -->
-<header class="fixed top-0 w-full z-40 bg-surface/80 backdrop-blur-xl border-b border-white/40 shadow-sm h-20 flex justify-between items-center px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto left-0 right-0">
+
+<!-- TopAppBar Shell -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-white/40 shadow-sm">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 max-w-max-width mx-auto">
 <div class="flex items-center gap-4">
-<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary-fixed">
-<img class="w-full h-full object-cover" data-alt="A professional studio portrait of a woman of African descent, radiating confidence and warmth, wearing elegant business attire in a brightly lit, modern executive office with glass walls and hints of greenery in the background. High-end editorial photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDE5U_SoFP_XH8rUc_Jfy-07CNozyDNIjqV0bJen6IWhCKC-9cxz-QZyeqClILORl2dRae2VAGQICVyRDAK72aO4sQ5gPbCJ-qOfAcL8mbGrVuyx1_PuS5Au1zQOYwZBVF_aD7YIJ5lLn4OBrT-0yExQDnEkteX58_JMc89-zOyPGNmhi0QjWR4azrw3ZE8cjayQCTx3EK2Zs0D2D1jOH8YM9ImKdIfPU3VyQQIybeXrnchwUk1_m-cfoBwXDCLUuflusBrvEmfO3lD"/>
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary/20">
+<img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_aVHensOGCjRtx4UImzqs-o7ygBqOKC4gaXwpfj4Okxljn6zXhC4_-3geLu5N-op7K7-c__I0RJVH62_nJNk0kBzWcKfjLaHozujaiBvZyFtAbIJj6MSfjrP3hpufSb-72OSIVcFoO3jJes7hMDdOgPQ_g741g7P4TNPuMTn8WNxgfPGJSlHGj4DdpB-pzn49v_YqJwAEsezBon9jUIE0EjrWHtVtJT28M-pvLVUsOH6kuBRGZ-swUiNUDskiiqDUvYMMKRLdHVSJ"/>
 </div>
 <span class="font-headline-md text-headline-md font-bold tracking-tight text-primary">Be Proud &amp; Shine</span>
 </div>
-<nav class="hidden md:flex gap-8">
-<a class="text-primary font-bold transition-colors" href="#">Home</a>
-<a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">Programs</a>
-<a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">Insights</a>
-<a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">Profile</a>
+<!-- Desktop Nav -->
+<nav class="hidden md:flex items-center gap-8">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors duration-300" href="index.html">Accueil</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors duration-300" href="mentorship.html">Mentorat</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors duration-300" href="events.html">Événements</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors duration-300" href="dashboard.html">Mon Espace</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors duration-300" href="contact.html">Contact</a>
 </nav>
 <div class="flex items-center gap-4">
-<button class="material-symbols-outlined text-primary active:scale-95 transition-transform" data-icon="notifications">notifications</button>
-<button class="md:hidden material-symbols-outlined text-primary" data-icon="menu">menu</button>
+<button class="p-2 text-on-surface-variant hover:text-primary transition-colors active:scale-95">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<a href="register.html" class="primary-gradient-btn shine-effect text-white px-6 py-2 rounded-full font-label-md hidden md:block text-center">
+    Rejoindre le Cercle
+</a>
+<button id="mobile-menu-btn" class="md:hidden p-3 text-on-surface-variant hover:bg-surface-container-high rounded-full transition-colors">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
 </div>
 </header>
 
-<!-- Mobile Nav -->
-<div id="mobile-menu" class="hidden md:hidden fixed inset-0 top-20 bg-surface/95 backdrop-blur-2xl z-40 overflow-y-auto pb-20 border-t border-outline-variant/20 shadow-2xl">
-    <div class="flex flex-col p-8 gap-8 text-center mt-4">
-        <a class="font-headline-md text-primary font-bold" href="index.html">Home</a>
-        <a class="font-headline-md text-on-surface-variant hover:text-secondary transition-colors" href="mentorship.html">Mentorship</a>
-        <a class="font-headline-md text-on-surface-variant hover:text-secondary transition-colors" href="events.html">Events</a>
-        <a class="font-headline-md text-on-surface-variant hover:text-secondary transition-colors" href="dashboard.html">Dashboard</a>
-        <button class="primary-gradient-btn shine-effect text-white px-8 py-4 rounded-full font-label-md mt-4 mx-auto w-full max-w-sm shadow-xl">
-            Join Network
-        </button>
-    </div>
-</div>
+
+
+
 
 <main class="pt-28 pb-24 px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto">
 <!-- Welcome Hero Section -->
 <section class="mb-12">
 <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
 <div>
-<h1 class="font-headline-lg text-headline-lg text-primary mb-2">Welcome back, Amina!</h1>
+<h1 class="font-headline-lg text-headline-lg text-primary mb-2">Heureuse de vous revoir, Amina!</h1>
 <p class="text-on-surface-variant font-body-lg">Your leadership journey is accelerating. You've unlocked 2 new modules this week.</p>
 </div>
 <button class="shine-btn text-white px-8 py-3 rounded-full font-label-md flex items-center gap-2 active:scale-95 transition-transform">
@@ -375,7 +379,7 @@
 </button>
 <script>
         // Micro-interaction: Update progress ring on load
-        document.addEventListener('DOMContentLoaded', () => {
+        document.addEventÉcouterer('DOMContentLoaded', () => {
             const circle = document.querySelector('circle.text-secondary');
             if (circle) {
                 // Radius is 40, circumference is 2 * pi * r = 251.2
@@ -386,11 +390,11 @@
     </script>
 
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
+    document.addEventÉcouterer('DOMContentLoaded', () => {
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         if (mobileMenuBtn && mobileMenu) {
-            mobileMenuBtn.addEventListener('click', () => {
+            mobileMenuBtn.addEventÉcouterer('click', () => {
                 mobileMenu.classList.toggle('hidden');
                 const icon = mobileMenuBtn.querySelector('.material-symbols-outlined');
                 if(mobileMenu.classList.contains('hidden')){

@@ -1,0 +1,131 @@
+
+
+<main class="pt-32 pb-24 bg-surface-container-lowest">
+    <div class="max-w-4xl mx-auto px-margin-mobile">
+        <span class="font-label-md text-secondary bg-secondary-container/30 px-4 py-2 rounded-full inline-block mb-6">PROGRAMME PHARE</span>
+        <h1 class="font-display-lg text-primary mb-6">Immersion Douce de 12 Semaines</h1>
+        <p class="font-body-lg text-on-surface-variant mb-12">Un voyage intérieur et professionnel conçu avec amour pour vous aider à affirmer votre posture, libérer votre voix et diriger avec une profonde intelligence émotionnelle.</p>
+        
+        <div class="glass-card p-10 rounded-3xl mb-12 shadow-lg">
+            <h2 class="font-headline-lg text-primary mb-6">Ce que vous allez vivre</h2>
+            <ul class="space-y-4">
+                <li class="flex items-start gap-4">
+                    <span class="material-symbols-outlined text-secondary mt-1">favorite</span>
+                    <p class="font-body-md text-on-surface-variant">Des cercles de parole hebdomadaires intimes et bienveillants.</p>
+                </li>
+                <li class="flex items-start gap-4">
+                    <span class="material-symbols-outlined text-secondary mt-1">psychology</span>
+                    <p class="font-body-md text-on-surface-variant">Des ateliers profonds sur la connaissance de soi et le syndrome de l'imposteur.</p>
+                </li>
+                <li class="flex items-start gap-4">
+                    <span class="material-symbols-outlined text-secondary mt-1">trending_up</span>
+                    <p class="font-body-md text-on-surface-variant">Un plan de croissance personnalisé co-construit avec votre mentore.</p>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="text-center">
+            <a href="register.html" class="primary-gradient-btn shine-effect text-white px-10 py-5 rounded-full font-label-md text-xl shadow-2xl inline-block active:scale-95 transition-transform">
+                Réserver ma place pour le prochain voyage
+            </a>
+        </div>
+    </div>
+</main>
+
+<footer class="bg-surface-container-low pt-24 pb-12 mt-auto">
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+<div class="md:col-span-1">
+<span class="font-headline-md text-primary font-bold tracking-tight mb-6 block">Be Proud &amp; Shine</span>
+<p class="font-body-md text-on-surface-variant mb-6">Élever la voix des femmes africaines par l'excellence, la sororité, et un leadership bienveillant et inspirant.</p>
+</div>
+<div>
+<h4 class="font-label-md text-primary mb-6 uppercase tracking-wider">Ressources</h4>
+<ul class="space-y-4 font-body-md text-on-surface-variant">
+<li><a class="hover:text-secondary transition-colors" href="program-details.html">Formations</a></li>
+<li><a class="hover:text-secondary transition-colors" href="mentorship.html">Mentorat</a></li>
+<li><a class="hover:text-secondary transition-colors" href="events.html">Agenda</a></li>
+<li><a class="hover:text-secondary transition-colors" href="dashboard.html">Espace Membre</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-primary mb-6 uppercase tracking-wider">Lien direct</h4>
+<ul class="space-y-4 font-body-md text-on-surface-variant">
+<li><a class="hover:text-secondary transition-colors" href="contact.html">Nous écrire</a></li>
+<li><a class="hover:text-secondary transition-colors" href="#">Instagram</a></li>
+<li><a class="hover:text-secondary transition-colors" href="#">LinkedIn</a></li>
+<li><a class="hover:text-secondary transition-colors" href="#">Podcast</a></li>
+</ul>
+</div>
+<div class="md:col-span-1">
+<h4 class="font-label-md text-primary mb-6 uppercase tracking-wider">Restons connectées</h4>
+<p class="font-body-md text-on-surface-variant mb-4">Inscrivez-vous à notre newsletter pour recevoir notre dose d'inspiration hebdomadaire.</p>
+<form class="flex flex-col gap-3">
+    <input type="email" placeholder="Votre adresse douce@email.com" class="w-full px-4 py-3 rounded-2xl border-none bg-white shadow-sm focus:ring-2 focus:ring-secondary text-on-surface" required>
+    <button type="submit" class="w-full primary-gradient-btn text-white px-4 py-3 rounded-2xl font-label-md shadow-md hover:shadow-lg transition-all">S'épanouir avec nous</button>
+</form>
+</div>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-outline-variant/20 text-[12px] font-label-md text-on-surface-variant opacity-60">
+<p>© 2024 Be Proud &amp; Shine. Tous droits réservés avec amour.</p>
+<div class="flex gap-6 mt-4 md:mt-0">
+<a href="#" class="hover:text-primary">Politique de confidentialité</a>
+<a href="#" class="hover:text-primary">Conditions générales</a>
+</div>
+</div>
+</div>
+</footer>
+
+<script>
+        // Simple counter animation logic
+        function animateValue(obj, start, end, duration) {
+            let startTimestamp = null;
+            const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                const value = Math.floor(progress * (end - start) + start);
+                obj.innerHTML = (end === 95 ? value + '%' : value + (end === 10 ? 'k+' : '+'));
+                if (progress < 1) {
+                    window.requestAnimationFrame(step);
+                }
+            };
+            window.requestAnimationFrame(step);
+        }
+
+        const observerOptions = {
+            threshold: 0.5
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateValue(document.getElementById('count-members'), 0, 10, 2000);
+                    animateValue(document.getElementById('count-mentors'), 0, 500, 2000);
+                    animateValue(document.getElementById('count-success'), 0, 95, 2000);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        observer.observe(document.getElementById('count-members'));
+    </script>
+
+<script>
+    document.addEventÉcouterer('DOMContentLoaded', () => {
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventÉcouterer('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                const icon = mobileMenuBtn.querySelector('.material-symbols-outlined');
+                if(mobileMenu.classList.contains('hidden')){
+                    icon.textContent = 'menu';
+                } else {
+                    icon.textContent = 'close';
+                }
+            });
+        }
+    });
+</script>
+
+</body></html>

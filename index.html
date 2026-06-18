@@ -165,28 +165,31 @@
 </head>
 <body class="bg-surface text-on-surface font-body-md selection:bg-secondary-container">
 <!-- TopAppBar Shell -->
+
+<!-- TopAppBar Shell -->
 <header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-white/40 shadow-sm">
 <div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 max-w-max-width mx-auto">
 <div class="flex items-center gap-4">
 <div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary/20">
-<img class="w-full h-full object-cover" data-alt="A professional portrait of an African woman executive in business attire, with warm lighting and a soft-focus office background, embodying confidence and leadership excellence." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_aVHensOGCjRtx4UImzqs-o7ygBqOKC4gaXwpfj4Okxljn6zXhC4_-3geLu5N-op7K7-c__I0RJVH62_nJNk0kBzWcKfjLaHozujaiBvZyFtAbIJj6MSfjrP3hpufSb-72OSIVcFoO3jJes7hMDdOgPQ_g741g7P4TNPuMTn8WNxgfPGJSlHGj4DdpB-pzn49v_YqJwAEsezBon9jUIE0EjrWHtVtJT28M-pvLVUsOH6kuBRGZ-swUiNUDskiiqDUvYMMKRLdHVSJ"/>
+<img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_aVHensOGCjRtx4UImzqs-o7ygBqOKC4gaXwpfj4Okxljn6zXhC4_-3geLu5N-op7K7-c__I0RJVH62_nJNk0kBzWcKfjLaHozujaiBvZyFtAbIJj6MSfjrP3hpufSb-72OSIVcFoO3jJes7hMDdOgPQ_g741g7P4TNPuMTn8WNxgfPGJSlHGj4DdpB-pzn49v_YqJwAEsezBon9jUIE0EjrWHtVtJT28M-pvLVUsOH6kuBRGZ-swUiNUDskiiqDUvYMMKRLdHVSJ"/>
 </div>
 <span class="font-headline-md text-headline-md font-bold tracking-tight text-primary">Be Proud &amp; Shine</span>
 </div>
 <!-- Desktop Nav -->
 <nav class="hidden md:flex items-center gap-8">
-<a class="font-label-md text-label-md text-primary font-bold relative active-dot" href="#">Home</a>
-<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#">Programs</a>
-<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#">Insights</a>
-<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#">Community</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors duration-300" href="index.html">Accueil</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors duration-300" href="mentorship.html">Mentorat</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors duration-300" href="events.html">Événements</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors duration-300" href="dashboard.html">Mon Espace</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors duration-300" href="contact.html">Contact</a>
 </nav>
 <div class="flex items-center gap-4">
 <button class="p-2 text-on-surface-variant hover:text-primary transition-colors active:scale-95">
 <span class="material-symbols-outlined">notifications</span>
 </button>
-<button class="primary-gradient-btn shine-effect text-white px-6 py-2 rounded-full font-label-md hidden md:block">
-                    Join Network
-                </button>
+<a href="register.html" class="primary-gradient-btn shine-effect text-white px-6 py-2 rounded-full font-label-md hidden md:block text-center">
+    Rejoindre le Cercle
+</a>
 <button id="mobile-menu-btn" class="md:hidden p-3 text-on-surface-variant hover:bg-surface-container-high rounded-full transition-colors">
 <span class="material-symbols-outlined">menu</span>
 </button>
@@ -194,18 +197,9 @@
 </div>
 </header>
 
-<!-- Mobile Nav -->
-<div id="mobile-menu" class="hidden md:hidden fixed inset-0 top-20 bg-surface/95 backdrop-blur-2xl z-40 overflow-y-auto pb-20 border-t border-outline-variant/20 shadow-2xl">
-    <div class="flex flex-col p-8 gap-8 text-center mt-4">
-        <a class="font-headline-md text-primary font-bold" href="index.html">Home</a>
-        <a class="font-headline-md text-on-surface-variant hover:text-secondary transition-colors" href="mentorship.html">Mentorship</a>
-        <a class="font-headline-md text-on-surface-variant hover:text-secondary transition-colors" href="events.html">Events</a>
-        <a class="font-headline-md text-on-surface-variant hover:text-secondary transition-colors" href="dashboard.html">Dashboard</a>
-        <button class="primary-gradient-btn shine-effect text-white px-8 py-4 rounded-full font-label-md mt-4 mx-auto w-full max-w-sm shadow-xl">
-            Join Network
-        </button>
-    </div>
-</div>
+
+
+
 
 <main class="pt-20">
 <!-- Hero Section -->
@@ -218,17 +212,17 @@
 </div>
 <div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 <div class="z-10 text-center lg:text-left">
-<span class="font-label-md text-label-md text-on-secondary-container bg-secondary-container/30 px-4 py-1.5 rounded-full mb-6 inline-block">THE GLOBAL FELLOWSHIP 2024</span>
-<h1 class="font-display-lg text-display-lg text-primary mb-8 leading-[1.1] md:text-[64px]">Lead with <span class="text-secondary italic">Confidence</span>, Shine with Purpose.</h1>
+<span class="font-label-md text-label-md text-on-secondary-container bg-secondary-container/30 px-4 py-1.5 rounded-full mb-6 inline-block">LE CERCLE GLOBAL 2024</span>
+<h1 class="font-display-lg text-display-lg text-primary mb-8 leading-[1.1] md:text-[64px]">Dirigez avec <span class="text-secondary italic">Confiance</span>, Rayonnez avec Sens.</h1>
 <p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-xl mx-auto lg:mx-0">
-                        Join an elite network of African women leaders transforming industries through visionary thinking, mentorship, and excellence.
+                        Rejoignez un cercle intime de femmes africaines inspirantes, transformant le monde par leur bienveillance, leur vision et leur excellence.
                     </p>
 <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
 <button class="primary-gradient-btn shine-effect text-white px-10 py-4 rounded-full font-label-md text-lg">
-                            Start Your Journey
+                            Commencer mon voyage
                         </button>
 <button class="border-1.5 border-secondary text-secondary px-10 py-4 rounded-full font-label-md text-lg hover:bg-secondary/5 transition-colors">
-                            Explore Programs
+                            Explorer nos univers
                         </button>
 </div>
 </div>
@@ -243,8 +237,8 @@
 <span class="material-symbols-outlined text-on-secondary-container">verified</span>
 </div>
 <div>
-<p class="font-label-md text-on-surface-variant">Accredited</p>
-<p class="font-headline-md text-primary font-bold">Leadership Excellence</p>
+<p class="font-label-md text-on-surface-variant">Reconnu</p>
+<p class="font-headline-md text-primary font-bold">Excellence & Bienveillance</p>
 </div>
 </div>
 </div>
@@ -255,7 +249,7 @@
 <div class="w-8 h-8 rounded-full border-2 border-white bg-surface overflow-hidden"><img class="w-full h-full object-cover" data-alt="Portrait of an African woman entrepreneur." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfg71Wux0e6CRuSuKy_DvLp8cM9du7BPxILooTsaS5ltEu1EDfzjl54C5DnSSOVb0A_9RQFvVizr5j0_mq6yjhF8ZyQ5zhjH76m7ab8Wt1Xz9RAHTPnr5MvJ6y6bzBiUr6eeTNpMktpliC7TK1ri--DDaxwh9yui3XW1YX2-Qj0VytKA2P_C_ybKtRn7nL4eRPnfNMZmk_9Aq3q1fHfwpEphpFKsLB32WTzvYn61boq7atTX3eWHI0Yt1Es0FmuorvVKjS9udBfaWV"/></div>
 <div class="w-8 h-8 rounded-full border-2 border-white bg-primary text-white flex items-center justify-center text-[10px] font-bold">+10k</div>
 </div>
-<p class="font-label-md text-on-surface-variant">Active Community Members</p>
+<p class="font-label-md text-on-surface-variant">Sœurs Épanouies</p>
 </div>
 </div>
 </div>
@@ -269,21 +263,21 @@
 <span class="material-symbols-outlined text-white text-3xl">groups</span>
 </div>
 <h3 class="font-display-lg text-[40px] text-primary mb-2" id="count-members">10k+</h3>
-<p class="font-body-md text-on-surface-variant font-medium">Empowered Members</p>
+<p class="font-body-md text-on-surface-variant font-medium">Femmes Épanouies</p>
 </div>
 <div class="glass-card p-10 text-center flex flex-col items-center group">
 <div class="w-16 h-16 rounded-3xl bg-secondary-container flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
 <span class="material-symbols-outlined text-on-secondary-container text-3xl">psychology</span>
 </div>
 <h3 class="font-display-lg text-[40px] text-primary mb-2" id="count-mentors">500+</h3>
-<p class="font-body-md text-on-surface-variant font-medium">Expert Mentors</p>
+<p class="font-body-md text-on-surface-variant font-medium">Mentors Inspirantes</p>
 </div>
 <div class="glass-card p-10 text-center flex flex-col items-center group">
 <div class="w-16 h-16 rounded-3xl bg-tertiary-fixed flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
 <span class="material-symbols-outlined text-on-tertiary-fixed-variant text-3xl">trending_up</span>
 </div>
 <h3 class="font-display-lg text-[40px] text-primary mb-2" id="count-success">95%</h3>
-<p class="font-body-md text-on-surface-variant font-medium">Career Success Rate</p>
+<p class="font-body-md text-on-surface-variant font-medium">Taux d'Épanouissement</p>
 </div>
 </div>
 </div>
@@ -293,11 +287,11 @@
 <div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
 <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
 <div class="max-w-2xl">
-<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Be Proud &amp; Shine Academy: Your Growth Map</h2>
-<p class="font-body-lg text-on-surface-variant">Curated programs designed by global executives to accelerate your professional journey.</p>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Be Proud &amp; Académie : Votre Chemin de Croissance</h2>
+<p class="font-body-lg text-on-surface-variant">Des programmes conçus avec amour par des leaders mondiales pour nourrir votre voyage professionnel et personnel.</p>
 </div>
-<a class="text-secondary font-label-md flex items-center gap-2 group" href="#">
-                        View All Programs <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+<a class="text-secondary font-label-md flex items-center gap-2 group" href="program-details.html">
+                        Découvrir nos pépites <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
 </a>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
@@ -305,16 +299,16 @@
 <div class="glass-card overflow-hidden flex flex-col hover:shadow-xl transition-shadow">
 <div class="h-48 overflow-hidden relative">
 <img class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" data-alt="A professional boardroom setting with high-end furniture and panoramic city views, reflecting a corporate leadership environment in a modern African metropolis. High-key lighting, clean aesthetics." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCG7h_al9ePgx7l6BzH_rD8QGl0wWiKWZEnT5zZapvM9Y0muOI6E4uN_UScUwhfWhIvYC2PrqYr_wSO4OplpkVLfMA6_dj28fHjClb07EzrR_4gCHIUtFtO-rGHCPp8W0DJxhghscvVHzOCmbo6qmeytG6XBPj-8mnjWtKqbPBPmF5ckhkuEdJmQns3hqMY_jNIzgUYnF2ZuJ3j679FJlIn9PkIPLxmDMT-qkTuvUJo_ME1UyTa5eipSXFdZTsydbINdB1UhgC-8jFb"/>
-<div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-[12px] font-bold text-primary">ADVANCED</div>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-[12px] font-bold text-primary">AVANCÉ</div>
 </div>
 <div class="p-8 flex-1 flex flex-col">
 <div class="flex items-center gap-2 mb-4 text-secondary">
 <span class="material-symbols-outlined text-sm">schedule</span>
-<span class="text-label-md">12-Week Immersion</span>
+<span class="text-label-md">Immersion Douce de 12 Semaines</span>
 </div>
 <h3 class="font-headline-md text-headline-md text-primary mb-4 leading-tight">Boardroom Ready: Strategic Governance</h3>
 <p class="font-body-md text-on-surface-variant mb-6 flex-1">Master the art of corporate governance and strategic decision-making at the highest level.</p>
-<button class="w-full py-3 rounded-xl border border-outline-variant text-primary font-label-md hover:bg-primary/5 transition-colors">Course Details</button>
+<button class="w-full py-3 rounded-xl border border-outline-variant text-primary font-label-md hover:bg-primary/5 transition-colors">Voir les détails</button>
 </div>
 </div>
 <!-- Course Card 2 -->
@@ -330,7 +324,7 @@
 </div>
 <h3 class="font-headline-md text-headline-md text-primary mb-4 leading-tight">Authentic Leadership & Personal Branding</h3>
 <p class="font-body-md text-on-surface-variant mb-6 flex-1">Build a globally recognized personal brand that reflects your unique leadership philosophy.</p>
-<button class="w-full py-3 rounded-xl primary-gradient-btn text-white font-label-md">Enroll Now</button>
+<button class="w-full py-3 rounded-xl primary-gradient-btn text-white font-label-md">M'inscrire avec joie</button>
 </div>
 </div>
 <!-- Course Card 3 -->
@@ -346,7 +340,7 @@
 </div>
 <h3 class="font-headline-md text-headline-md text-primary mb-4 leading-tight">Scaling Ventures: From Seed to IPO</h3>
 <p class="font-body-md text-on-surface-variant mb-6 flex-1">A comprehensive guide for female founders to scale their organizations while maintaining culture.</p>
-<button class="w-full py-3 rounded-xl border border-outline-variant text-primary font-label-md hover:bg-primary/5 transition-colors">Course Details</button>
+<button class="w-full py-3 rounded-xl border border-outline-variant text-primary font-label-md hover:bg-primary/5 transition-colors">Voir les détails</button>
 </div>
 </div>
 </div>
@@ -430,7 +424,7 @@
 <p class="font-body-lg text-secondary-fixed mb-12 max-w-2xl mx-auto">Applications for our Executive Fellowship and Mentorship programs are now open for the next cohort.</p>
 <div class="flex flex-col sm:flex-row gap-6 justify-center">
 <button class="bg-white text-primary px-12 py-5 rounded-full font-label-md text-xl hover:bg-secondary-fixed transition-colors shine-effect overflow-hidden relative">
-                        Start Your Journey
+                        Commencer mon voyage
                     </button>
 <button class="border border-white/40 text-white px-12 py-5 rounded-full font-label-md text-xl hover:bg-white/10 transition-colors">
                         Book a Consultation
@@ -441,58 +435,68 @@
 </main>
 <!-- BottomNavBar Shell -->
 <nav class="md:hidden fixed bottom-0 left-0 w-full z-50 bg-surface/80 dark:bg-inverse-surface/90 backdrop-blur-xl border-t border-white/40 shadow-[0_-10px_30px_rgba(0,95,107,0.08)] flex justify-around items-center h-16 pb-safe">
-<a class="flex flex-col items-center justify-center text-primary font-bold relative after:content-[''] after:absolute after:-bottom-1 after:w-1 after:h-1 after:bg-primary after:rounded-full" href="#">
+<a class="flex flex-col items-center justify-center text-primary font-bold relative after:content-[''] after:absolute after:-bottom-1 after:w-1 after:h-1 after:bg-primary after:rounded-full" href="program-details.html">
 <span class="material-symbols-outlined">home</span>
 <span class="text-[10px] font-label-md">Home</span>
 </a>
-<a class="flex flex-col items-center justify-center text-on-surface-variant opacity-70" href="#">
+<a class="flex flex-col items-center justify-center text-on-surface-variant opacity-70" href="program-details.html">
 <span class="material-symbols-outlined">auto_stories</span>
 <span class="text-[10px] font-label-md">Programs</span>
 </a>
-<a class="flex flex-col items-center justify-center text-on-surface-variant opacity-70" href="#">
+<a class="flex flex-col items-center justify-center text-on-surface-variant opacity-70" href="program-details.html">
 <span class="material-symbols-outlined">insights</span>
 <span class="text-[10px] font-label-md">Insights</span>
 </a>
-<a class="flex flex-col items-center justify-center text-on-surface-variant opacity-70" href="#">
+<a class="flex flex-col items-center justify-center text-on-surface-variant opacity-70" href="program-details.html">
 <span class="material-symbols-outlined">person</span>
 <span class="text-[10px] font-label-md">Profile</span>
 </a>
 </nav>
-<footer class="bg-surface-dim pt-20 pb-24 md:pb-12 border-t border-outline-variant/20">
+
+<footer class="bg-surface-container-low pt-24 pb-12 mt-auto">
 <div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
 <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
-<div class="md:col-span-2">
+<div class="md:col-span-1">
 <span class="font-headline-md text-primary font-bold tracking-tight mb-6 block">Be Proud &amp; Shine</span>
-<p class="font-body-md text-on-surface-variant max-w-sm">Elevating the African female narrative through structured excellence, community empowerment, and purposeful leadership.</p>
+<p class="font-body-md text-on-surface-variant mb-6">Élever la voix des femmes africaines par l'excellence, la sororité, et un leadership bienveillant et inspirant.</p>
 </div>
 <div>
-<h4 class="font-label-md text-primary mb-6 uppercase tracking-wider">Resources</h4>
+<h4 class="font-label-md text-primary mb-6 uppercase tracking-wider">Ressources</h4>
 <ul class="space-y-4 font-body-md text-on-surface-variant">
-<li><a class="hover:text-secondary transition-colors" href="#">Research Reports</a></li>
-<li><a class="hover:text-secondary transition-colors" href="#">Global Fellowship</a></li>
-<li><a class="hover:text-secondary transition-colors" href="#">Alumni Network</a></li>
-<li><a class="hover:text-secondary transition-colors" href="#">Corporate Training</a></li>
+<li><a class="hover:text-secondary transition-colors" href="program-details.html">Formations</a></li>
+<li><a class="hover:text-secondary transition-colors" href="mentorship.html">Mentorat</a></li>
+<li><a class="hover:text-secondary transition-colors" href="events.html">Agenda</a></li>
+<li><a class="hover:text-secondary transition-colors" href="dashboard.html">Espace Membre</a></li>
 </ul>
 </div>
 <div>
-<h4 class="font-label-md text-primary mb-6 uppercase tracking-wider">Connect</h4>
+<h4 class="font-label-md text-primary mb-6 uppercase tracking-wider">Lien direct</h4>
 <ul class="space-y-4 font-body-md text-on-surface-variant">
-<li><a class="hover:text-secondary transition-colors" href="#">Contact Us</a></li>
-<li><a class="hover:text-secondary transition-colors" href="#">Instagram</a></li>
-<li><a class="hover:text-secondary transition-colors" href="#">LinkedIn</a></li>
-<li><a class="hover:text-secondary transition-colors" href="#">Newsletter</a></li>
+<li><a class="hover:text-secondary transition-colors" href="contact.html">Nous écrire</a></li>
+<li><a class="hover:text-secondary transition-colors" href="program-details.html">Instagram</a></li>
+<li><a class="hover:text-secondary transition-colors" href="program-details.html">LinkedIn</a></li>
+<li><a class="hover:text-secondary transition-colors" href="program-details.html">Podcast</a></li>
 </ul>
+</div>
+<div class="md:col-span-1">
+<h4 class="font-label-md text-primary mb-6 uppercase tracking-wider">Restons connectées</h4>
+<p class="font-body-md text-on-surface-variant mb-4">Inscrivez-vous à notre newsletter pour recevoir notre dose d'inspiration hebdomadaire.</p>
+<form class="flex flex-col gap-3">
+    <input type="email" placeholder="Votre adresse douce@email.com" class="w-full px-4 py-3 rounded-2xl border-none bg-white shadow-sm focus:ring-2 focus:ring-secondary text-on-surface" required>
+    <button type="submit" class="w-full primary-gradient-btn text-white px-4 py-3 rounded-2xl font-label-md shadow-md hover:shadow-lg transition-all">S'épanouir avec nous</button>
+</form>
 </div>
 </div>
 <div class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-outline-variant/20 text-[12px] font-label-md text-on-surface-variant opacity-60">
-<p>© 2024 Be Proud & Shine. All Rights Reserved.</p>
+<p>© 2024 Be Proud &amp; Shine. Tous droits réservés avec amour.</p>
 <div class="flex gap-6 mt-4 md:mt-0">
-<a href="#">Privacy Policy</a>
-<a href="#">Terms of Service</a>
+<a href="program-details.html" class="hover:text-primary">Politique de confidentialité</a>
+<a href="program-details.html" class="hover:text-primary">Conditions générales</a>
 </div>
 </div>
 </div>
 </footer>
+
 <script>
         // Simple counter animation logic
         function animateValue(obj, start, end, duration) {

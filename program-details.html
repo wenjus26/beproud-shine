@@ -1,3 +1,204 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Be Proud &amp; Shine | Empowering African Women</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Inter:wght@400;500;600&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface": "#f8f9fa",
+                    "on-secondary-container": "#006b76",
+                    "surface-container-highest": "#e1e3e4",
+                    "inverse-primary": "#8bd2df",
+                    "secondary": "#006973",
+                    "on-secondary-fixed-variant": "#004f57",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-container": "#005f6b",
+                    "surface-container-low": "#f3f4f5",
+                    "on-primary-fixed-variant": "#004e59",
+                    "tertiary-fixed": "#dee4dc",
+                    "error": "#ba1a1a",
+                    "surface-dim": "#d9dadb",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "inverse-on-surface": "#f0f1f2",
+                    "secondary-fixed-dim": "#60d7e7",
+                    "on-surface-variant": "#3f484a",
+                    "surface-container": "#edeeef",
+                    "on-primary": "#ffffff",
+                    "on-tertiary-container": "#c6ccc4",
+                    "on-tertiary-fixed": "#171d18",
+                    "inverse-surface": "#2e3132",
+                    "tertiary-container": "#515751",
+                    "error-container": "#ffdad6",
+                    "on-primary-container": "#90d6e4",
+                    "primary-fixed-dim": "#8bd2df",
+                    "secondary-container": "#79edfe",
+                    "on-error-container": "#93000a",
+                    "on-surface": "#191c1d",
+                    "primary-fixed": "#a7eefc",
+                    "surface-tint": "#156874",
+                    "on-primary-fixed": "#001f24",
+                    "secondary-fixed": "#93f1ff",
+                    "outline": "#6f797b",
+                    "on-secondary-fixed": "#001f23",
+                    "background": "#f8f9fa",
+                    "on-background": "#191c1d",
+                    "tertiary": "#3a403a",
+                    "surface-variant": "#e1e3e4",
+                    "outline-variant": "#bec8ca",
+                    "on-tertiary-fixed-variant": "#424842",
+                    "primary": "#00464f",
+                    "on-error": "#ffffff",
+                    "tertiary-fixed-dim": "#c2c8c0",
+                    "surface-container-high": "#e7e8e9",
+                    "surface-bright": "#f8f9fa"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-desktop": "64px",
+                    "gutter": "24px",
+                    "max-width": "1280px",
+                    "base": "8px",
+                    "margin-mobile": "24px"
+            },
+            "fontFamily": {
+                    "headline-lg": ["Outfit"],
+                    "headline-lg-mobile": ["Outfit"],
+                    "body-lg": ["Inter"],
+                    "headline-md": ["Outfit"],
+                    "body-md": ["Inter"],
+                    "label-md": ["Inter"],
+                    "display-lg": ["Outfit"]
+            },
+            "fontSize": {
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            box-shadow: 0 10px 30px rgba(0, 95, 107, 0.08);
+            border-radius: 16px;
+        }
+
+        .primary-gradient-btn {
+            background: linear-gradient(135deg, #00464f 0%, #006b76 100%);
+            transition: all 0.3s ease-in-out;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .primary-gradient-btn:hover {
+            filter: brightness(1.1);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 70, 79, 0.2);
+        }
+
+        .shine-effect::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transform: rotate(45deg);
+            animation: shine 3s infinite;
+        }
+
+        @keyframes shine {
+            0% { left: -50%; }
+            100% { left: 150%; }
+        }
+
+        .floating-element {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .active-dot::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 4px;
+            background-color: currentColor;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md selection:bg-secondary-container">
+<!-- TopAppBar Shell -->
+
+<!-- TopAppBar Shell -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-white/40 shadow-sm">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 max-w-max-width mx-auto">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary/20">
+<img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_aVHensOGCjRtx4UImzqs-o7ygBqOKC4gaXwpfj4Okxljn6zXhC4_-3geLu5N-op7K7-c__I0RJVH62_nJNk0kBzWcKfjLaHozujaiBvZyFtAbIJj6MSfjrP3hpufSb-72OSIVcFoO3jJes7hMDdOgPQ_g741g7P4TNPuMTn8WNxgfPGJSlHGj4DdpB-pzn49v_YqJwAEsezBon9jUIE0EjrWHtVtJT28M-pvLVUsOH6kuBRGZ-swUiNUDskiiqDUvYMMKRLdHVSJ"/>
+</div>
+<span class="font-headline-md text-headline-md font-bold tracking-tight text-primary">Be Proud &amp; Shine</span>
+</div>
+<!-- Desktop Nav -->
+<nav class="hidden md:flex items-center gap-8">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors duration-300" href="index.html">Accueil</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors duration-300" href="mentorship.html">Mentorat</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors duration-300" href="events.html">Événements</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors duration-300" href="dashboard.html">Mon Espace</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors duration-300" href="contact.html">Contact</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="p-2 text-on-surface-variant hover:text-primary transition-colors active:scale-95">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<a href="register.html" class="primary-gradient-btn shine-effect text-white px-6 py-2 rounded-full font-label-md hidden md:block text-center">
+    Rejoindre le Cercle
+</a>
+<button id="mobile-menu-btn" class="md:hidden p-3 text-on-surface-variant hover:bg-surface-container-high rounded-full transition-colors">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</header>
+
+
+
 
 
 <main class="pt-32 pb-24 bg-surface-container-lowest">
@@ -31,7 +232,6 @@
         </div>
     </div>
 </main>
-
 <footer class="bg-surface-container-low pt-24 pb-12 mt-auto">
 <div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
 <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
@@ -52,9 +252,9 @@
 <h4 class="font-label-md text-primary mb-6 uppercase tracking-wider">Lien direct</h4>
 <ul class="space-y-4 font-body-md text-on-surface-variant">
 <li><a class="hover:text-secondary transition-colors" href="contact.html">Nous écrire</a></li>
-<li><a class="hover:text-secondary transition-colors" href="https://instagram.com/beproudshine">Instagram</a></li>
-<li><a class="hover:text-secondary transition-colors" href="https://linkedin.com/company/beproudshine">LinkedIn</a></li>
-<li><a class="hover:text-secondary transition-colors" href="https://spotify.com">Podcast</a></li>
+<li><a class="hover:text-secondary transition-colors" href="program-details.html">Instagram</a></li>
+<li><a class="hover:text-secondary transition-colors" href="program-details.html">LinkedIn</a></li>
+<li><a class="hover:text-secondary transition-colors" href="program-details.html">Podcast</a></li>
 </ul>
 </div>
 <div class="md:col-span-1">
@@ -69,8 +269,8 @@
 <div class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-outline-variant/20 text-[12px] font-label-md text-on-surface-variant opacity-60">
 <p>© 2026 Tous droits réservés par REJUSTE WENOUMI.</p>
 <div class="flex gap-6 mt-4 md:mt-0">
-<a href="privacy.html" class="hover:text-primary">Politique de confidentialité</a>
-<a href="terms.html" class="hover:text-primary">Conditions générales</a>
+<a href="program-details.html" class="hover:text-primary">Politique de confidentialité</a>
+<a href="program-details.html" class="hover:text-primary">Conditions générales</a>
 </div>
 </div>
 </div>
@@ -111,11 +311,11 @@
     </script>
 
 <script>
-    document.addEventÉcouterer('DOMContentLoaded', () => {
+    document.addEventListener('DOMContentLoaded', () => {
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         if (mobileMenuBtn && mobileMenu) {
-            mobileMenuBtn.addEventÉcouterer('click', () => {
+            mobileMenuBtn.addEventListener('click', () => {
                 mobileMenu.classList.toggle('hidden');
                 const icon = mobileMenuBtn.querySelector('.material-symbols-outlined');
                 if(mobileMenu.classList.contains('hidden')){
